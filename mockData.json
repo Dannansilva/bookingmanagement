@@ -1,0 +1,1264 @@
+{
+  "users": [
+    {
+      "_id": "user001",
+      "name": "John Chairman",
+      "email": "chairman@kashi.com",
+      "userType": "CHAIRMAN",
+      "permissions": ["all"],
+      "lastLogIn": "2025-01-05T10:30:00.000+05:30",
+      "createdAt": "2024-01-01T09:00:00.000+05:30",
+      "updatedAt": "2025-01-05T10:30:00.000+05:30"
+    },
+    {
+      "_id": "user002",
+      "name": "Sarah Manager",
+      "email": "manager@kashi.com",
+      "userType": "MANAGER",
+      "permissions": ["manage_bookings", "manage_clients", "manage_employees", "view_reports"],
+      "lastLogIn": "2025-01-05T09:15:00.000+05:30",
+      "createdAt": "2024-01-15T09:00:00.000+05:30",
+      "updatedAt": "2025-01-05T09:15:00.000+05:30"
+    },
+    {
+      "_id": "user003",
+      "name": "Emily Receptionist",
+      "email": "receptionist@kashi.com",
+      "userType": "RECEPTIONIST",
+      "permissions": ["manage_bookings", "view_clients", "view_services"],
+      "lastLogIn": "2025-01-05T08:00:00.000+05:30",
+      "createdAt": "2024-02-01T09:00:00.000+05:30",
+      "updatedAt": "2025-01-05T08:00:00.000+05:30"
+    },
+    {
+      "_id": "user004",
+      "name": "Mike Utility",
+      "email": "utility@kashi.com",
+      "userType": "UTILITY",
+      "permissions": ["view_bookings"],
+      "lastLogIn": "2025-01-04T16:30:00.000+05:30",
+      "createdAt": "2024-03-01T09:00:00.000+05:30",
+      "updatedAt": "2025-01-04T16:30:00.000+05:30"
+    }
+  ],
+  "clients": [
+    {
+      "_id": "client001",
+      "fullName": "Priya Sharma",
+      "email": "priya.sharma@email.com",
+      "phone": "+94771234567",
+      "type": "VIP",
+      "wallet": 15000,
+      "referralSource": "FRIEND",
+      "vipSubscription": {
+        "id": "vipsub001",
+        "package": {
+          "id": "vippkg001",
+          "packageName": "Platinum Wellness",
+          "discountPercentage": 20
+        },
+        "startDate": "2024-06-01T00:00:00.000+05:30",
+        "expiryDate": "2025-06-01T00:00:00.000+05:30",
+        "status": "ACTIVE",
+        "amountPaid": 50000,
+        "paymentMode": "CARD",
+        "paymentReference": "PAY2024060001"
+      },
+      "createdAt": "2024-03-15T10:00:00.000+05:30",
+      "updatedAt": "2024-06-01T14:30:00.000+05:30"
+    },
+    {
+      "_id": "client002",
+      "fullName": "Rajesh Fernando",
+      "email": "rajesh.f@email.com",
+      "phone": "+94772345678",
+      "type": "REGULAR",
+      "wallet": 5000,
+      "referralSource": "GOOGLE",
+      "createdAt": "2024-05-20T11:30:00.000+05:30",
+      "updatedAt": "2025-01-03T09:15:00.000+05:30"
+    },
+    {
+      "_id": "client003",
+      "fullName": "Amaya Perera",
+      "email": "amaya.perera@email.com",
+      "phone": "+94773456789",
+      "type": "VIP",
+      "wallet": 25000,
+      "referralSource": "SOCIAL_MEDIA",
+      "vipSubscription": {
+        "id": "vipsub002",
+        "package": {
+          "id": "vippkg002",
+          "packageName": "Gold Wellness",
+          "discountPercentage": 15
+        },
+        "startDate": "2024-08-01T00:00:00.000+05:30",
+        "expiryDate": "2025-08-01T00:00:00.000+05:30",
+        "status": "ACTIVE",
+        "amountPaid": 35000,
+        "paymentMode": "BANK_TRANSFER",
+        "paymentReference": "TRF2024080001"
+      },
+      "createdAt": "2024-07-10T14:20:00.000+05:30",
+      "updatedAt": "2024-08-01T10:00:00.000+05:30"
+    },
+    {
+      "_id": "client004",
+      "fullName": "Kamal Silva",
+      "email": "kamal.silva@email.com",
+      "phone": "+94774567890",
+      "type": "REGULAR",
+      "wallet": 2000,
+      "referralSource": "WEBSITE",
+      "createdAt": "2024-09-05T16:45:00.000+05:30",
+      "updatedAt": "2024-12-20T11:30:00.000+05:30"
+    },
+    {
+      "_id": "client005",
+      "fullName": "Nadeesha Jayasinghe",
+      "email": "nadeesha.j@email.com",
+      "phone": "+94775678901",
+      "type": "REGULAR",
+      "wallet": 8000,
+      "referralSource": "ADVERTISEMENT",
+      "createdAt": "2024-11-12T09:30:00.000+05:30",
+      "updatedAt": "2025-01-04T15:20:00.000+05:30"
+    }
+  ],
+  "employees": [
+    {
+      "_id": "emp001",
+      "name": "Dr. Anjali Wickramasinghe",
+      "email": "anjali.w@kashi.com",
+      "phone": "+94711234567",
+      "designation": "DOCTOR",
+      "commissionRate": 15,
+      "commissionType": "PERCENTAGE",
+      "commissionAmount": 0,
+      "isActive": true,
+      "workingSchedule": {
+        "monday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "tuesday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "wednesday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "thursday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "friday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "saturday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 },
+        "sunday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 }
+      },
+      "createdAt": "2024-01-10T09:00:00.000+05:30",
+      "updatedAt": "2024-12-01T10:00:00.000+05:30"
+    },
+    {
+      "_id": "emp002",
+      "name": "Chaminda Rathnayake",
+      "email": "chaminda.r@kashi.com",
+      "phone": "+94712345678",
+      "designation": "THERAPIST",
+      "commissionRate": 12,
+      "commissionType": "PERCENTAGE",
+      "commissionAmount": 0,
+      "isActive": true,
+      "workingSchedule": {
+        "monday": { "isWorkingDay": true, "startTime": 540, "endTime": 1080 },
+        "tuesday": { "isWorkingDay": true, "startTime": 540, "endTime": 1080 },
+        "wednesday": { "isWorkingDay": true, "startTime": 540, "endTime": 1080 },
+        "thursday": { "isWorkingDay": true, "startTime": 540, "endTime": 1080 },
+        "friday": { "isWorkingDay": true, "startTime": 540, "endTime": 1080 },
+        "saturday": { "isWorkingDay": true, "startTime": 540, "endTime": 900 },
+        "sunday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 }
+      },
+      "createdAt": "2024-01-20T09:00:00.000+05:30",
+      "updatedAt": "2024-11-15T14:30:00.000+05:30"
+    },
+    {
+      "_id": "emp003",
+      "name": "Sanduni Perera",
+      "email": "sanduni.p@kashi.com",
+      "phone": "+94713456789",
+      "designation": "THERAPIST",
+      "commissionRate": 10,
+      "commissionType": "PERCENTAGE",
+      "commissionAmount": 0,
+      "isActive": true,
+      "workingSchedule": {
+        "monday": { "isWorkingDay": true, "startTime": 600, "endTime": 1140 },
+        "tuesday": { "isWorkingDay": true, "startTime": 600, "endTime": 1140 },
+        "wednesday": { "isWorkingDay": true, "startTime": 600, "endTime": 1140 },
+        "thursday": { "isWorkingDay": true, "startTime": 600, "endTime": 1140 },
+        "friday": { "isWorkingDay": true, "startTime": 600, "endTime": 1140 },
+        "saturday": { "isWorkingDay": true, "startTime": 600, "endTime": 960 },
+        "sunday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 }
+      },
+      "createdAt": "2024-02-05T09:00:00.000+05:30",
+      "updatedAt": "2024-12-10T11:20:00.000+05:30"
+    },
+    {
+      "_id": "emp004",
+      "name": "Nuwan Bandara",
+      "email": "nuwan.b@kashi.com",
+      "phone": "+94714567890",
+      "designation": "THERAPIST",
+      "commissionRate": 10,
+      "commissionType": "PERCENTAGE",
+      "commissionAmount": 0,
+      "isActive": true,
+      "workingSchedule": {
+        "monday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "tuesday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "wednesday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 },
+        "thursday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "friday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "saturday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "sunday": { "isWorkingDay": true, "startTime": 540, "endTime": 900 }
+      },
+      "createdAt": "2024-03-12T09:00:00.000+05:30",
+      "updatedAt": "2024-12-05T09:45:00.000+05:30"
+    },
+    {
+      "_id": "emp005",
+      "name": "Tharushi Gamage",
+      "email": "tharushi.g@kashi.com",
+      "phone": "+94715678901",
+      "designation": "RECEPTIONIST",
+      "commissionRate": 0,
+      "commissionType": "PERCENTAGE",
+      "commissionAmount": 0,
+      "isActive": true,
+      "workingSchedule": {
+        "monday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "tuesday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "wednesday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "thursday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "friday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "saturday": { "isWorkingDay": true, "startTime": 480, "endTime": 1020 },
+        "sunday": { "isWorkingDay": false, "startTime": 0, "endTime": 0 }
+      },
+      "createdAt": "2024-02-01T09:00:00.000+05:30",
+      "updatedAt": "2024-11-20T13:15:00.000+05:30"
+    }
+  ],
+  "services": [
+    {
+      "_id": "svc001",
+      "name": "Swedish Massage",
+      "serviceType": "massage",
+      "price": 8000,
+      "duration": 60,
+      "description": "Full body Swedish massage for relaxation",
+      "isActive": true,
+      "hasVariants": true,
+      "parentService": null,
+      "variants": [
+        {
+          "_id": "var001",
+          "name": "30 Minutes",
+          "duration": 30,
+          "price": 4500,
+          "isActive": true
+        },
+        {
+          "_id": "var002",
+          "name": "90 Minutes",
+          "duration": 90,
+          "price": 11000,
+          "isActive": true
+        }
+      ],
+      "createdAt": "2024-01-05T10:00:00.000+05:30",
+      "updatedAt": "2024-11-10T14:20:00.000+05:30"
+    },
+    {
+      "_id": "svc002",
+      "name": "Ayurvedic Treatment",
+      "serviceType": "ayurveda",
+      "price": 12000,
+      "duration": 90,
+      "description": "Traditional Ayurvedic healing treatment",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-01-05T10:00:00.000+05:30",
+      "updatedAt": "2024-10-15T11:30:00.000+05:30"
+    },
+    {
+      "_id": "svc003",
+      "name": "Aromatherapy",
+      "serviceType": "massage",
+      "price": 9500,
+      "duration": 75,
+      "description": "Relaxing aromatherapy massage with essential oils",
+      "isActive": true,
+      "hasVariants": true,
+      "parentService": null,
+      "variants": [
+        {
+          "_id": "var003",
+          "name": "45 Minutes",
+          "duration": 45,
+          "price": 6500,
+          "isActive": true
+        }
+      ],
+      "createdAt": "2024-01-08T10:00:00.000+05:30",
+      "updatedAt": "2024-09-25T09:45:00.000+05:30"
+    },
+    {
+      "_id": "svc004",
+      "name": "Facial Treatment",
+      "serviceType": "beauty",
+      "price": 6000,
+      "duration": 60,
+      "description": "Deep cleansing and rejuvenating facial",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-01-10T10:00:00.000+05:30",
+      "updatedAt": "2024-12-01T10:15:00.000+05:30"
+    },
+    {
+      "_id": "svc005",
+      "name": "Yoga Session",
+      "serviceType": "yoga",
+      "price": 3000,
+      "duration": 60,
+      "description": "Private yoga session with certified instructor",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-01-12T10:00:00.000+05:30",
+      "updatedAt": "2024-11-05T15:30:00.000+05:30"
+    },
+    {
+      "_id": "svc006",
+      "name": "Hot Stone Massage",
+      "serviceType": "massage",
+      "price": 10000,
+      "duration": 90,
+      "description": "Therapeutic hot stone massage",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-02-01T10:00:00.000+05:30",
+      "updatedAt": "2024-10-20T12:00:00.000+05:30"
+    },
+    {
+      "_id": "svc007",
+      "name": "Meditation Session",
+      "serviceType": "wellness_package",
+      "price": 2500,
+      "duration": 45,
+      "description": "Guided meditation for stress relief",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-02-15T10:00:00.000+05:30",
+      "updatedAt": "2024-11-18T14:45:00.000+05:30"
+    },
+    {
+      "_id": "svc008",
+      "name": "Room Rental - Deluxe",
+      "serviceType": "room_rent",
+      "price": 15000,
+      "duration": 1440,
+      "description": "24-hour deluxe room rental",
+      "isActive": true,
+      "hasVariants": false,
+      "parentService": null,
+      "variants": [],
+      "createdAt": "2024-01-05T10:00:00.000+05:30",
+      "updatedAt": "2024-12-10T09:00:00.000+05:30"
+    }
+  ],
+  "vipPackages": [
+    {
+      "_id": "vippkg001",
+      "packageCode": "PLAT2024",
+      "packageName": "Platinum Wellness",
+      "description": "Premium wellness package with exclusive benefits",
+      "annualFee": 50000,
+      "discountPercentage": 20,
+      "monthlyBenefits": [
+        {
+          "month": 1,
+          "benefits": [
+            {
+              "id": "ben001",
+              "name": "Swedish Massage",
+              "serviceType": "massage",
+              "duration": 60,
+              "quantity": 2,
+              "choices": [
+                { "id": "choice001", "serviceName": "Swedish Massage", "duration": 60 }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "ACTIVE",
+      "isActive": true,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-06-15T11:30:00.000+05:30"
+    },
+    {
+      "_id": "vippkg002",
+      "packageCode": "GOLD2024",
+      "packageName": "Gold Wellness",
+      "description": "Comprehensive wellness package with great value",
+      "annualFee": 35000,
+      "discountPercentage": 15,
+      "monthlyBenefits": [
+        {
+          "month": 1,
+          "benefits": [
+            {
+              "id": "ben002",
+              "name": "Aromatherapy",
+              "serviceType": "massage",
+              "duration": 75,
+              "quantity": 1,
+              "choices": [
+                { "id": "choice002", "serviceName": "Aromatherapy", "duration": 75 }
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "ACTIVE",
+      "isActive": true,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-07-20T14:15:00.000+05:30"
+    }
+  ],
+  "bookings": [
+    {
+      "_id": "book001",
+      "client": {
+        "_id": "client001",
+        "email": "priya.sharma@email.com",
+        "fullName": "Priya Sharma",
+        "phone": "+94771234567"
+      },
+      "bookingTime": "2025-01-06T10:00:00.000+05:30",
+      "status": "confirmed",
+      "notes": "Client prefers female therapist",
+      "paymentMode": "CARD",
+      "receiptNumber": "RCP20250001",
+      "bookingServiceItems": [
+        {
+          "_id": "bsi001",
+          "booking": "book001",
+          "service": {
+            "_id": "svc001",
+            "name": "Swedish Massage",
+            "price": 8000,
+            "duration": 60,
+            "description": "Full body Swedish massage for relaxation"
+          },
+          "assignedTo": {
+            "_id": "emp003",
+            "name": "Sanduni Perera",
+            "email": "sanduni.p@kashi.com",
+            "designation": "THERAPIST"
+          },
+          "price": 8000,
+          "finalPrice": 6400,
+          "discountApplied": 1600,
+          "duration": 60,
+          "scheduledStartTime": "2025-01-06T10:00:00.000+05:30",
+          "scheduledEndTime": "2025-01-06T11:00:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 8000,
+      "finalPrice": 6400,
+      "discountApplied": 1600,
+      "duration": 60,
+      "createdAt": "2025-01-04T14:30:00.000+05:30",
+      "updatedAt": "2025-01-04T14:30:00.000+05:30"
+    },
+    {
+      "_id": "book002",
+      "client": {
+        "_id": "client002",
+        "email": "rajesh.f@email.com",
+        "fullName": "Rajesh Fernando",
+        "phone": "+94772345678"
+      },
+      "bookingTime": "2025-01-06T14:00:00.000+05:30",
+      "status": "confirmed",
+      "notes": "",
+      "paymentMode": "CASH",
+      "receiptNumber": "RCP20250002",
+      "bookingServiceItems": [
+        {
+          "_id": "bsi002",
+          "booking": "book002",
+          "service": {
+            "_id": "svc002",
+            "name": "Ayurvedic Treatment",
+            "price": 12000,
+            "duration": 90,
+            "description": "Traditional Ayurvedic healing treatment"
+          },
+          "assignedTo": {
+            "_id": "emp001",
+            "name": "Dr. Anjali Wickramasinghe",
+            "email": "anjali.w@kashi.com",
+            "designation": "DOCTOR"
+          },
+          "price": 12000,
+          "finalPrice": 12000,
+          "discountApplied": 0,
+          "duration": 90,
+          "scheduledStartTime": "2025-01-06T14:00:00.000+05:30",
+          "scheduledEndTime": "2025-01-06T15:30:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 12000,
+      "finalPrice": 12000,
+      "discountApplied": 0,
+      "duration": 90,
+      "createdAt": "2025-01-04T16:20:00.000+05:30",
+      "updatedAt": "2025-01-04T16:20:00.000+05:30"
+    },
+    {
+      "_id": "book003",
+      "client": {
+        "_id": "client003",
+        "email": "amaya.perera@email.com",
+        "fullName": "Amaya Perera",
+        "phone": "+94773456789"
+      },
+      "bookingTime": "2025-01-07T11:00:00.000+05:30",
+      "status": "pending",
+      "notes": "Multi-service booking",
+      "paymentMode": "CARD",
+      "receiptNumber": null,
+      "bookingServiceItems": [
+        {
+          "_id": "bsi003",
+          "booking": "book003",
+          "service": {
+            "_id": "svc003",
+            "name": "Aromatherapy",
+            "price": 9500,
+            "duration": 75,
+            "description": "Relaxing aromatherapy massage with essential oils"
+          },
+          "assignedTo": {
+            "_id": "emp002",
+            "name": "Chaminda Rathnayake",
+            "email": "chaminda.r@kashi.com",
+            "designation": "THERAPIST"
+          },
+          "price": 9500,
+          "finalPrice": 8075,
+          "discountApplied": 1425,
+          "duration": 75,
+          "scheduledStartTime": "2025-01-07T11:00:00.000+05:30",
+          "scheduledEndTime": "2025-01-07T12:15:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        },
+        {
+          "_id": "bsi004",
+          "booking": "book003",
+          "service": {
+            "_id": "svc004",
+            "name": "Facial Treatment",
+            "price": 6000,
+            "duration": 60,
+            "description": "Deep cleansing and rejuvenating facial"
+          },
+          "assignedTo": {
+            "_id": "emp003",
+            "name": "Sanduni Perera",
+            "email": "sanduni.p@kashi.com",
+            "designation": "THERAPIST"
+          },
+          "price": 6000,
+          "finalPrice": 5100,
+          "discountApplied": 900,
+          "duration": 60,
+          "scheduledStartTime": "2025-01-07T12:30:00.000+05:30",
+          "scheduledEndTime": "2025-01-07T13:30:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 15500,
+      "finalPrice": 13175,
+      "discountApplied": 2325,
+      "duration": 135,
+      "createdAt": "2025-01-05T09:45:00.000+05:30",
+      "updatedAt": "2025-01-05T09:45:00.000+05:30"
+    },
+    {
+      "_id": "book004",
+      "client": {
+        "_id": "client004",
+        "email": "kamal.silva@email.com",
+        "fullName": "Kamal Silva",
+        "phone": "+94774567890"
+      },
+      "bookingTime": "2025-01-05T15:00:00.000+05:30",
+      "status": "completed",
+      "notes": "",
+      "paymentMode": "CASH",
+      "receiptNumber": "RCP20250003",
+      "bookingServiceItems": [
+        {
+          "_id": "bsi005",
+          "booking": "book004",
+          "service": {
+            "_id": "svc005",
+            "name": "Yoga Session",
+            "price": 3000,
+            "duration": 60,
+            "description": "Private yoga session with certified instructor"
+          },
+          "assignedTo": {
+            "_id": "emp004",
+            "name": "Nuwan Bandara",
+            "email": "nuwan.b@kashi.com",
+            "designation": "THERAPIST"
+          },
+          "price": 3000,
+          "finalPrice": 3000,
+          "discountApplied": 0,
+          "duration": 60,
+          "scheduledStartTime": "2025-01-05T15:00:00.000+05:30",
+          "scheduledEndTime": "2025-01-05T16:00:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 3000,
+      "finalPrice": 3000,
+      "discountApplied": 0,
+      "duration": 60,
+      "createdAt": "2025-01-05T09:00:00.000+05:30",
+      "updatedAt": "2025-01-05T16:15:00.000+05:30"
+    }
+  ],
+  "discountRequests": [
+    {
+      "_id": "disc001",
+      "customerName": "Priya Sharma",
+      "serviceDescription": "Swedish Massage",
+      "originalAmount": 8000,
+      "discountType": "PERCENTAGE",
+      "discountValue": 20,
+      "finalAmount": 6400,
+      "reason": "VIP client discount",
+      "isComplimentary": false,
+      "status": "APPROVED",
+      "createdBy": {
+        "_id": "user003",
+        "name": "Emily Receptionist",
+        "email": "receptionist@kashi.com",
+        "userType": "RECEPTIONIST"
+      },
+      "approvedBy": {
+        "_id": "user002",
+        "name": "Sarah Manager",
+        "email": "manager@kashi.com",
+        "userType": "MANAGER"
+      },
+      "approvalTrail": [
+        {
+          "userId": "user003",
+          "userRole": "RECEPTIONIST",
+          "action": "CREATED",
+          "comments": "VIP client requesting standard discount",
+          "timestamp": "2025-01-04T14:25:00.000+05:30"
+        },
+        {
+          "userId": "user002",
+          "userRole": "MANAGER",
+          "action": "APPROVED",
+          "comments": "Approved for VIP client",
+          "timestamp": "2025-01-04T14:28:00.000+05:30"
+        }
+      ],
+      "booking": "book001",
+      "bookingServiceItem": "bsi001",
+      "expiresAt": "2025-01-04T16:28:00.000+05:30",
+      "createdAt": "2025-01-04T14:25:00.000+05:30",
+      "updatedAt": "2025-01-04T14:28:00.000+05:30"
+    },
+    {
+      "_id": "disc002",
+      "customerName": "Nadeesha Jayasinghe",
+      "serviceDescription": "Hot Stone Massage",
+      "originalAmount": 10000,
+      "discountType": "AMOUNT",
+      "discountValue": 1500,
+      "finalAmount": 8500,
+      "reason": "First-time customer promotion",
+      "isComplimentary": false,
+      "status": "PENDING",
+      "createdBy": {
+        "_id": "user003",
+        "name": "Emily Receptionist",
+        "email": "receptionist@kashi.com",
+        "userType": "RECEPTIONIST"
+      },
+      "approvalTrail": [
+        {
+          "userId": "user003",
+          "userRole": "RECEPTIONIST",
+          "action": "CREATED",
+          "comments": "First-time customer discount request",
+          "timestamp": "2025-01-05T10:15:00.000+05:30"
+        }
+      ],
+      "booking": null,
+      "bookingServiceItem": null,
+      "expiresAt": "2025-01-05T12:15:00.000+05:30",
+      "createdAt": "2025-01-05T10:15:00.000+05:30",
+      "updatedAt": "2025-01-05T10:15:00.000+05:30"
+    }
+  ],
+  "giftCards": [
+    {
+      "_id": "gift001",
+      "code": "GC2024001",
+      "type": "MONETARY",
+      "value": 10000,
+      "remainingValue": 10000,
+      "status": "ACTIVE",
+      "expiryDate": "2025-12-31T23:59:59.000+05:30",
+      "purchaserName": "Saman Gunawardena",
+      "purchaserPhone": "+94701234567",
+      "purchaserEmail": "saman.g@email.com",
+      "recipientName": "Nimal Perera",
+      "recipientPhone": "+94709876543",
+      "recipientEmail": "nimal.p@email.com",
+      "message": "Happy Birthday! Enjoy your wellness journey",
+      "description": "Birthday gift",
+      "paymentType": {
+        "id": "pay001",
+        "name": "Credit Card",
+        "code": "CARD"
+      },
+      "redeemedAt": null,
+      "redeemedBooking": null,
+      "redeemedBy": null,
+      "auditTrail": [
+        {
+          "action": "CREATED",
+          "performedBy": "user003",
+          "timestamp": "2024-12-20T11:30:00.000+05:30",
+          "details": "Gift card created"
+        }
+      ],
+      "createdAt": "2024-12-20T11:30:00.000+05:30",
+      "updatedAt": "2024-12-20T11:30:00.000+05:30"
+    },
+    {
+      "_id": "gift002",
+      "code": "GC2024002",
+      "type": "SERVICE",
+      "value": 8000,
+      "remainingValue": 0,
+      "status": "REDEEMED",
+      "expiryDate": "2025-06-30T23:59:59.000+05:30",
+      "purchaserName": "Kumari Silva",
+      "purchaserPhone": "+94702345678",
+      "purchaserEmail": "kumari.s@email.com",
+      "recipientName": "Anura Bandara",
+      "recipientPhone": "+94708765432",
+      "recipientEmail": "anura.b@email.com",
+      "message": "Congratulations on your achievement!",
+      "description": "Swedish Massage voucher",
+      "paymentType": {
+        "id": "pay002",
+        "name": "Cash",
+        "code": "CASH"
+      },
+      "redeemedAt": "2025-01-03T14:20:00.000+05:30",
+      "redeemedBooking": "book004",
+      "redeemedBy": "client004",
+      "auditTrail": [
+        {
+          "action": "CREATED",
+          "performedBy": "user003",
+          "timestamp": "2024-11-15T10:00:00.000+05:30",
+          "details": "Gift card created"
+        },
+        {
+          "action": "REDEEMED",
+          "performedBy": "user003",
+          "timestamp": "2025-01-03T14:20:00.000+05:30",
+          "details": "Redeemed for booking book004"
+        }
+      ],
+      "createdAt": "2024-11-15T10:00:00.000+05:30",
+      "updatedAt": "2025-01-03T14:20:00.000+05:30"
+    }
+  ],
+  "notifications": [
+    {
+      "_id": "notif001",
+      "type": "DISCOUNT_REQUEST_CREATED",
+      "title": "New Discount Request",
+      "message": "A new discount request has been submitted by Emily Receptionist for Nadeesha Jayasinghe - Hot Stone Massage",
+      "status": "UNREAD",
+      "priority": "MEDIUM",
+      "recipient": {
+        "_id": "user002",
+        "name": "Sarah Manager",
+        "email": "manager@kashi.com",
+        "userType": "MANAGER"
+      },
+      "sender": {
+        "_id": "user003",
+        "name": "Emily Receptionist",
+        "email": "receptionist@kashi.com",
+        "userType": "RECEPTIONIST"
+      },
+      "metadata": {
+        "discountRequestId": "disc002",
+        "amount": 10000,
+        "discountValue": 1500
+      },
+      "createdAt": "2025-01-05T10:15:00.000+05:30",
+      "updatedAt": "2025-01-05T10:15:00.000+05:30",
+      "readAt": null,
+      "expiresAt": "2025-01-12T10:15:00.000+05:30"
+    },
+    {
+      "_id": "notif002",
+      "type": "DISCOUNT_REQUEST_APPROVED",
+      "title": "Discount Request Approved",
+      "message": "Your discount request for Priya Sharma - Swedish Massage has been approved",
+      "status": "READ",
+      "priority": "LOW",
+      "recipient": {
+        "_id": "user003",
+        "name": "Emily Receptionist",
+        "email": "receptionist@kashi.com",
+        "userType": "RECEPTIONIST"
+      },
+      "sender": {
+        "_id": "user002",
+        "name": "Sarah Manager",
+        "email": "manager@kashi.com",
+        "userType": "MANAGER"
+      },
+      "metadata": {
+        "discountRequestId": "disc001",
+        "approvedAmount": 6400
+      },
+      "createdAt": "2025-01-04T14:28:00.000+05:30",
+      "updatedAt": "2025-01-04T15:00:00.000+05:30",
+      "readAt": "2025-01-04T15:00:00.000+05:30",
+      "expiresAt": "2025-01-11T14:28:00.000+05:30"
+    },
+    {
+      "_id": "notif003",
+      "type": "SYSTEM_ALERT",
+      "title": "Low Inventory Alert",
+      "message": "Massage oil stock is running low (Current: 5 bottles, Minimum: 10 bottles)",
+      "status": "UNREAD",
+      "priority": "HIGH",
+      "recipient": {
+        "_id": "user002",
+        "name": "Sarah Manager",
+        "email": "manager@kashi.com",
+        "userType": "MANAGER"
+      },
+      "sender": {
+        "_id": "system",
+        "name": "System",
+        "email": "system@kashi.com",
+        "userType": "SYSTEM"
+      },
+      "metadata": {
+        "inventoryItemId": "inv001",
+        "currentStock": 5,
+        "minStock": 10
+      },
+      "createdAt": "2025-01-05T08:00:00.000+05:30",
+      "updatedAt": "2025-01-05T08:00:00.000+05:30",
+      "readAt": null,
+      "expiresAt": "2025-01-12T08:00:00.000+05:30"
+    }
+  ],
+  "leaveRequests": [
+    {
+      "_id": "leave001",
+      "employeeId": {
+        "_id": "emp003",
+        "name": "Sanduni Perera",
+        "email": "sanduni.p@kashi.com",
+        "designation": "THERAPIST"
+      },
+      "leaveType": "SICK",
+      "startDate": "2025-01-08T00:00:00.000+05:30",
+      "endDate": "2025-01-09T00:00:00.000+05:30",
+      "totalDays": 2,
+      "reason": "Flu and fever",
+      "status": "APPROVED",
+      "requestedBy": "emp003",
+      "approvedBy": "user002",
+      "approvedAt": "2025-01-05T09:30:00.000+05:30",
+      "rejectionReason": null,
+      "rejectedAt": null,
+      "isHalfDay": false,
+      "halfDayPeriod": null,
+      "timeBlockIds": [],
+      "attachments": [],
+      "duration": 2,
+      "isPastLeave": false,
+      "isCurrentLeave": false,
+      "isFutureLeave": true,
+      "createdAt": "2025-01-05T09:00:00.000+05:30",
+      "updatedAt": "2025-01-05T09:30:00.000+05:30"
+    },
+    {
+      "_id": "leave002",
+      "employeeId": {
+        "_id": "emp004",
+        "name": "Nuwan Bandara",
+        "email": "nuwan.b@kashi.com",
+        "designation": "THERAPIST"
+      },
+      "leaveType": "VACATION",
+      "startDate": "2025-01-20T00:00:00.000+05:30",
+      "endDate": "2025-01-22T00:00:00.000+05:30",
+      "totalDays": 3,
+      "reason": "Family vacation",
+      "status": "PENDING",
+      "requestedBy": "emp004",
+      "approvedBy": null,
+      "approvedAt": null,
+      "rejectionReason": null,
+      "rejectedAt": null,
+      "isHalfDay": false,
+      "halfDayPeriod": null,
+      "timeBlockIds": [],
+      "attachments": [],
+      "duration": 3,
+      "isPastLeave": false,
+      "isCurrentLeave": false,
+      "isFutureLeave": true,
+      "createdAt": "2025-01-04T14:00:00.000+05:30",
+      "updatedAt": "2025-01-04T14:00:00.000+05:30"
+    }
+  ],
+  "inventoryItems": [
+    {
+      "_id": "inv001",
+      "name": "Massage Oil - Lavender",
+      "inventoryType": "internal_operations",
+      "description": "Pure lavender essential oil for massage",
+      "sku": "MO-LAV-500",
+      "currentStock": 5,
+      "minStock": 10,
+      "unit": "bottles",
+      "unitPrice": 2500,
+      "isActive": true,
+      "isLowStock": true,
+      "createdAt": "2024-01-10T10:00:00.000+05:30",
+      "updatedAt": "2025-01-05T08:00:00.000+05:30"
+    },
+    {
+      "_id": "inv002",
+      "name": "Towels - White",
+      "inventoryType": "internal_operations",
+      "description": "Premium cotton towels",
+      "sku": "TWL-WHT-100",
+      "currentStock": 50,
+      "minStock": 20,
+      "unit": "pieces",
+      "unitPrice": 800,
+      "isActive": true,
+      "isLowStock": false,
+      "createdAt": "2024-01-10T10:00:00.000+05:30",
+      "updatedAt": "2025-01-03T11:20:00.000+05:30"
+    },
+    {
+      "_id": "inv003",
+      "name": "Herbal Tea - Wellness Blend",
+      "inventoryType": "customer_sales",
+      "description": "Premium wellness herbal tea blend",
+      "sku": "TEA-WB-250",
+      "currentStock": 25,
+      "minStock": 15,
+      "unit": "packets",
+      "unitPrice": 1500,
+      "isActive": true,
+      "isLowStock": false,
+      "createdAt": "2024-02-01T10:00:00.000+05:30",
+      "updatedAt": "2025-01-04T16:45:00.000+05:30"
+    },
+    {
+      "_id": "inv004",
+      "name": "Aromatherapy Candles",
+      "inventoryType": "wellness_retreat",
+      "description": "Natural soy wax aromatherapy candles",
+      "sku": "CAN-ARO-001",
+      "currentStock": 30,
+      "minStock": 10,
+      "unit": "pieces",
+      "unitPrice": 1200,
+      "isActive": true,
+      "isLowStock": false,
+      "createdAt": "2024-02-15T10:00:00.000+05:30",
+      "updatedAt": "2025-01-02T14:30:00.000+05:30"
+    }
+  ],
+  "paymentTypes": [
+    {
+      "id": "pay001",
+      "name": "Credit Card",
+      "code": "CARD",
+      "isActive": true,
+      "isDefault": false,
+      "displayOrder": 1,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-01-01T10:00:00.000+05:30"
+    },
+    {
+      "id": "pay002",
+      "name": "Cash",
+      "code": "CASH",
+      "isActive": true,
+      "isDefault": true,
+      "displayOrder": 2,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-01-01T10:00:00.000+05:30"
+    },
+    {
+      "id": "pay003",
+      "name": "Bank Transfer",
+      "code": "BANK_TRANSFER",
+      "isActive": true,
+      "isDefault": false,
+      "displayOrder": 3,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-01-01T10:00:00.000+05:30"
+    },
+    {
+      "id": "pay004",
+      "name": "Wallet",
+      "code": "WALLET",
+      "isActive": true,
+      "isDefault": false,
+      "displayOrder": 4,
+      "createdAt": "2024-01-01T10:00:00.000+05:30",
+      "updatedAt": "2024-01-01T10:00:00.000+05:30"
+    }
+  ],
+  "dashboardStats": {
+    "today": {
+      "date": "2025-01-05",
+      "totalBookings": 1,
+      "completedBookings": 1,
+      "pendingBookings": 0,
+      "cancelledBookings": 0,
+      "revenue": 3000,
+      "cashSales": 3000,
+      "cardSales": 0
+    },
+    "thisWeek": {
+      "startDate": "2024-12-30",
+      "endDate": "2025-01-05",
+      "totalBookings": 1,
+      "completedBookings": 1,
+      "revenue": 3000,
+      "cashSales": 3000,
+      "cardSales": 0
+    },
+    "thisMonth": {
+      "month": 1,
+      "year": 2025,
+      "totalBookings": 1,
+      "completedBookings": 1,
+      "revenue": 3000,
+      "cashSales": 3000,
+      "cardSales": 0,
+      "newClients": 0
+    },
+    "lastMonth": {
+      "month": 12,
+      "year": 2024,
+      "totalBookings": 45,
+      "completedBookings": 40,
+      "revenue": 485000,
+      "cashSales": 220000,
+      "cardSales": 265000,
+      "newClients": 8
+    }
+  },
+  "sales": [
+    {
+      "_id": "sale001",
+      "receiptNumber": "RCP20250003",
+      "type": "booking",
+      "referenceId": "book004",
+      "referenceModel": "Booking",
+      "clientId": "client004",
+      "employeeId": "emp004",
+      "amount": 3000,
+      "paymentBreakdown": [
+        {
+          "paymentMode": "CASH",
+          "amount": 3000,
+          "referenceId": null,
+          "notes": ""
+        }
+      ],
+      "status": "completed",
+      "metadata": {
+        "serviceName": "Yoga Session",
+        "clientName": "Kamal Silva"
+      },
+      "createdAt": "2025-01-05T16:00:00.000+05:30",
+      "updatedAt": "2025-01-05T16:00:00.000+05:30"
+    },
+    {
+      "_id": "sale002",
+      "receiptNumber": "RCP20250001",
+      "type": "booking",
+      "referenceId": "book001",
+      "referenceModel": "Booking",
+      "clientId": "client001",
+      "employeeId": "emp003",
+      "amount": 6400,
+      "paymentBreakdown": [
+        {
+          "paymentMode": "CARD",
+          "amount": 6400,
+          "referenceId": "TXN2025010001",
+          "notes": ""
+        }
+      ],
+      "status": "completed",
+      "metadata": {
+        "serviceName": "Swedish Massage",
+        "clientName": "Priya Sharma"
+      },
+      "createdAt": "2025-01-04T14:30:00.000+05:30",
+      "updatedAt": "2025-01-04T14:30:00.000+05:30"
+    },
+    {
+      "_id": "sale003",
+      "receiptNumber": "RCP20241231",
+      "type": "gift_card",
+      "referenceId": "gift001",
+      "referenceModel": "GiftCard",
+      "clientId": null,
+      "employeeId": null,
+      "amount": 10000,
+      "paymentBreakdown": [
+        {
+          "paymentMode": "CARD",
+          "amount": 10000,
+          "referenceId": "TXN2024123101",
+          "notes": "Gift card purchase"
+        }
+      ],
+      "status": "completed",
+      "metadata": {
+        "giftCardCode": "GC2024001",
+        "purchaserName": "Saman Gunawardena"
+      },
+      "createdAt": "2024-12-20T11:30:00.000+05:30",
+      "updatedAt": "2024-12-20T11:30:00.000+05:30"
+    }
+  ],
+  "commissionRules": [
+    {
+      "_id": "comm001",
+      "employeeId": "emp001",
+      "serviceId": "svc002",
+      "serviceType": "ayurveda",
+      "serviceName": "Ayurvedic Treatment",
+      "commissionType": "PERCENTAGE",
+      "commissionRate": 15,
+      "commissionAmount": 0,
+      "tieredRates": [],
+      "priority": 1,
+      "isActive": true,
+      "effectiveFrom": "2024-01-01T00:00:00.000+05:30",
+      "effectiveTo": null,
+      "notes": "Standard commission for Ayurvedic treatments",
+      "createdAt": "2024-01-10T10:00:00.000+05:30",
+      "updatedAt": "2024-01-10T10:00:00.000+05:30"
+    },
+    {
+      "_id": "comm002",
+      "employeeId": "emp002",
+      "serviceId": null,
+      "serviceType": "massage",
+      "serviceName": null,
+      "commissionType": "PERCENTAGE",
+      "commissionRate": 12,
+      "commissionAmount": 0,
+      "tieredRates": [],
+      "priority": 2,
+      "isActive": true,
+      "effectiveFrom": "2024-01-01T00:00:00.000+05:30",
+      "effectiveTo": null,
+      "notes": "Commission for all massage services",
+      "createdAt": "2024-01-20T10:00:00.000+05:30",
+      "updatedAt": "2024-01-20T10:00:00.000+05:30"
+    }
+  ],
+  "salaryRecords": [
+    {
+      "_id": "sal001",
+      "employeeId": "emp001",
+      "basicSalary": 80000,
+      "bra": 12000,
+      "col": 8000,
+      "totalBasicSalary": 100000,
+      "effectiveFrom": "2024-01-01T00:00:00.000+05:30",
+      "effectiveTo": null,
+      "isActive": true,
+      "notes": "Initial salary structure",
+      "createdAt": "2024-01-10T10:00:00.000+05:30",
+      "updatedAt": "2024-01-10T10:00:00.000+05:30"
+    },
+    {
+      "_id": "sal002",
+      "employeeId": "emp002",
+      "basicSalary": 50000,
+      "bra": 7500,
+      "col": 5000,
+      "totalBasicSalary": 62500,
+      "effectiveFrom": "2024-01-01T00:00:00.000+05:30",
+      "effectiveTo": null,
+      "isActive": true,
+      "notes": "Initial salary structure",
+      "createdAt": "2024-01-20T10:00:00.000+05:30",
+      "updatedAt": "2024-01-20T10:00:00.000+05:30"
+    },
+    {
+      "_id": "sal003",
+      "employeeId": "emp003",
+      "basicSalary": 45000,
+      "bra": 6750,
+      "col": 4500,
+      "totalBasicSalary": 56250,
+      "effectiveFrom": "2024-02-01T00:00:00.000+05:30",
+      "effectiveTo": null,
+      "isActive": true,
+      "notes": "Initial salary structure",
+      "createdAt": "2024-02-05T10:00:00.000+05:30",
+      "updatedAt": "2024-02-05T10:00:00.000+05:30"
+    }
+  ]
+}
