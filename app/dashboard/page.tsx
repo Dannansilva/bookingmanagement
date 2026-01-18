@@ -36,7 +36,7 @@ export default function Dashboard() {
             <DollarSign className="h-6 w-6 text-teal-600 dark:text-teal-400" />
           }
           iconBg="bg-teal-100 dark:bg-teal-500/10"
-          value="$1,616"
+          value="Rs. 1,616"
           label="Today's Revenue"
           trend="+8% vs yesterday"
           trendUp={true}
