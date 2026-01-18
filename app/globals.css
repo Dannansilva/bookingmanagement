@@ -1,32 +1,54 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Background colors */
-  --background: #f1f5f9;
-  --background-paper: #ffffff;
-  --foreground: #1e293b;
+  color-scheme: light dark;
 
-  /* Primary colors */
-  --primary: #1e293b;
-  --primary-light: #334155;
-  --primary-dark: #0f172a;
+  /* Background colors */
+  --background: #f3f4f6;
+  --background-paper: #ffffff;
+  --foreground: #111827;
+
+  /* Primary colors (Emerald) */
+  --primary: #059669;
+  --primary-light: #34d399;
+  --primary-dark: #047857;
 
   /* Secondary/Accent colors */
-  --secondary: #c9a962;
-  --secondary-light: #d4b978;
-  --secondary-dark: #b8944d;
+  --secondary: #10b981;
+  --secondary-light: #6ee7b7;
+  --secondary-dark: #059669;
 
   /* Text colors */
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
 
   /* Border colors */
-  --border: #e2e8f0;
+  --border: #e5e7eb;
 
   /* Status colors */
-  --success: #22c55e;
+  --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
+}
+
+.dark {
+  /* Background colors - Deep Dark for Luxe look */
+  --background: #020617; /* Slate 950 */
+  --background-paper: #0f172a; /* Slate 900 */
+  --foreground: #f8fafc;
+
+  /* Primary colors - Emerald */
+  --primary: #10b981; 
+  --primary-light: #34d399;
+  --primary-dark: #059669;
+
+  /* Text colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  /* Border colors */
+  --border: #1e293b; /* Slate 800 */
 }
 
 @theme inline {
