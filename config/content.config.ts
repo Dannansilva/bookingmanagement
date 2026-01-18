@@ -1,4 +1,9 @@
 export const contentConfig = {
+  currency: {
+    code: 'LKR',
+    symbol: 'Rs.',
+    locale: 'en-LK',
+  },
   pages: {
     login: {
       title: 'Welcome Back',

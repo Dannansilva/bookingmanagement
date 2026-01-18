@@ -1,9 +1,9 @@
 export const brandingConfig = {
   company: {
-    name: 'Luxe Salon',
-    tagline: 'Experience Luxury & Style',
-    logo: '/images/logo.svg',
-    logoAlt: '/images/logo.svg',
+    name: 'Booking management system',
+    tagline: 'customized booking management system',
+    logo: '/images/logo.png',
+    logoAlt: '/images/logo-alt.png',
     favicon: '/favicon.ico',
   },
   images: {
@@ -11,13 +11,13 @@ export const brandingConfig = {
     placeholder: '/images/placeholder.png',
   },
   contact: {
-    email: 'contact@luxesalon.com',
-    phone: '+1 234 567 8900',
-    address: '123 Luxury Lane, Beverly Hills',
+    email: 'contact@bookingmanagement.com',
+    phone: '+94 11 234 5678',
+    address: 'Colombo, Sri Lanka',
   },
   social: {
-    facebook: '',
-    instagram: '',
+    facebook: 'https://facebook.com/bookingmanagement',
+    instagram: 'https://instagram.com/bookingmanagement',
     twitter: '',
   },
 } as const;

@@ -35,7 +35,7 @@ export function StatCard({
 
       {trend && (
         <div
-          className={`mt-4 text-xs font-semibold ${trendUp ? "text-green-600 dark:text-green-400" : "text-red-500 dark:text-red-400"}`}
+          className={`mt-4 text-xs font-semibold ${trendUp ? "text-teal-600 dark:text-teal-400" : "text-red-500 dark:text-red-400"}`}
         >
           {trendUp ? "↗" : "↘"} {trend}
         </div>

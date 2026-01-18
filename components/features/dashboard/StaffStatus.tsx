@@ -34,7 +34,7 @@ export function StaffStatus() {
             className="flex items-center justify-between rounded-lg p-2 hover:bg-slate-50 dark:hover:bg-slate-800"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400">
                 <span className="text-sm font-bold">
                   {staff.name
                     .split(" ")
@@ -52,7 +52,7 @@ export function StaffStatus() {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-xs font-bold text-green-600 capitalize dark:text-green-400">
+              <p className="text-xs font-bold text-teal-600 capitalize dark:text-teal-400">
                 {staff.status}
               </p>
               <p className="text-[10px] text-slate-400">

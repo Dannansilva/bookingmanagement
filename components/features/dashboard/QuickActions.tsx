@@ -9,7 +9,7 @@ export function QuickActions() {
         Quick Actions
       </h3>
       <div className="grid grid-cols-2 gap-4">
-        <button className="col-span-1 flex flex-col items-center justify-center gap-2 rounded-xl bg-green-600 p-4 text-white transition-all hover:bg-green-700 hover:shadow-lg hover:shadow-green-200 dark:hover:shadow-green-900/20">
+        <button className="col-span-1 flex flex-col items-center justify-center gap-2 rounded-xl bg-teal-600 p-4 text-white transition-all hover:bg-teal-700 hover:shadow-lg hover:shadow-teal-200 dark:hover:shadow-teal-900/20">
           <CalendarPlus size={24} />
           <span className="text-sm font-semibold">New Booking</span>
         </button>

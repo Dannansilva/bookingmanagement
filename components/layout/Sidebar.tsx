@@ -129,7 +129,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
         <div
           className={`flex items-center gap-3 overflow-hidden ${isCollapsed ? "w-10" : "w-full"}`}
         >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-green-600 text-white dark:bg-green-500">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-600 text-white dark:bg-teal-500">
             {/* Simple Logo Placeholder if image fails */}
             <Scissors size={20} />
           </div>
@@ -152,7 +152,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2 pl-9 pr-4 text-sm text-slate-900 outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:focus:border-green-400 dark:focus:ring-green-400"
+            className="w-full rounded-xl border border-slate-200 bg-slate-50 py-2 pl-9 pr-4 text-sm text-slate-900 outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:focus:border-teal-400 dark:focus:ring-teal-400"
           />
           <div className="absolute right-3 top-2.5 rounded bg-slate-200 px-1.5 text-[10px] font-bold text-slate-500 dark:bg-slate-700 dark:text-slate-400">
             ⌘K
@@ -171,7 +171,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
                   href={item.href}
                   className={`group relative flex items-center justify-between rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-green-600 text-white shadow-md shadow-green-200 dark:bg-green-500 dark:shadow-none"
+                      ? "bg-teal-600 text-white shadow-md shadow-teal-200 dark:bg-teal-500 dark:shadow-none"
                       : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
                   } ${isCollapsed ? "justify-center" : ""}`}
                   title={isCollapsed ? item.label : undefined}
@@ -189,7 +189,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
                   {/* Badge */}
                   {!isCollapsed && item.count && (
                     <span
-                      className={`flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold ${isActive ? "bg-white text-green-600" : "bg-red-500 text-white"}`}
+                      className={`flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold ${isActive ? "bg-white text-teal-600" : "bg-red-500 text-white"}`}
                     >
                       {item.count}
                     </span>
@@ -213,7 +213,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
         {/* Collapse Toggle */}
         <button
           onClick={onToggle}
-          className="absolute -right-3 top-9 flex h-6 w-6 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm hover:text-green-600 hidden lg:flex dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:hover:text-green-400"
+          className="absolute -right-3 top-9 flex h-6 w-6 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm hover:text-teal-600 hidden lg:flex dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400 dark:hover:text-teal-400"
         >
           {isCollapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
         </button>
@@ -239,7 +239,7 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
         <div
           className={`flex items-center gap-3 rounded-xl bg-slate-50 p-2 dark:bg-slate-800 ${isCollapsed ? "justify-center" : ""}`}
         >
-          <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs dark:bg-green-500/10 dark:text-green-400">
+          <div className="h-8 w-8 rounded-full bg-teal-100 flex items-center justify-center text-teal-700 font-bold text-xs dark:bg-teal-500/10 dark:text-teal-400">
             AD
           </div>
           <div

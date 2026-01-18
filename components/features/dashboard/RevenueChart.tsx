@@ -39,7 +39,7 @@ export function RevenueChart() {
             Revenue Overview
           </h3>
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            Total: $28,778 • Avg: $2,056/day
+            Total: Rs. 28,778 • Avg: Rs. 2,056/day
           </p>
         </div>
         <div className="flex rounded-lg bg-slate-100 p-1 dark:bg-slate-800">
@@ -79,7 +79,7 @@ export function RevenueChart() {
               axisLine={false}
               tickLine={false}
               tick={{ fill: "#94a3b8", fontSize: 12 }}
-              tickFormatter={(value) => `$${value}`}
+              tickFormatter={(value) => `Rs. ${value}`}
             />
             <Tooltip
               contentStyle={{
@@ -89,15 +89,15 @@ export function RevenueChart() {
                 backgroundColor: "var(--background-paper)",
                 color: "var(--text-primary)",
               }}
-              itemStyle={{ color: "#059669" }}
+              itemStyle={{ color: "#0d9488" }}
             />
             <Line
               type="monotone"
               dataKey="value"
-              stroke="#059669"
+              stroke="#0d9488"
               strokeWidth={2}
               dot={false}
-              activeDot={{ r: 4, fill: "#059669", strokeWidth: 0 }}
+              activeDot={{ r: 4, fill: "#0d9488", strokeWidth: 0 }}
             />
           </LineChart>
         </ResponsiveContainer>
