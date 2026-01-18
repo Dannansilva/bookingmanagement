@@ -1,18 +1,18 @@
 export const themeConfig = {
   colors: {
     primary: {
-      main: "#059669", // Emerald 600
-      light: "#34d399", // Emerald 400
-      dark: "#047857", // Emerald 700
+      main: "#0d9488", // Teal 600
+      light: "#2dd4bf", // Teal 400
+      dark: "#0f766e", // Teal 700
     },
     secondary: {
-      main: "#10b981", // Emerald 500
-      light: "#6ee7b7", // Emerald 300
-      dark: "#059669", // Emerald 600
+      main: "#14b8a6", // Teal 500
+      light: "#5eead4", // Teal 300
+      dark: "#0d9488", // Teal 600
     },
     accent: "#f59e0b", // Amber 500
     background: {
-      default: "#f3f4f6", // Gray 100
+      default: "#f8fafc", // Slate 50
       paper: "#ffffff",
     },
     text: {
