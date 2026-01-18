@@ -1,7 +1,7 @@
 export const brandingConfig = {
   company: {
-    name: 'Booking Management',
-    tagline: 'Manage your bookings with ease',
+    name: 'Luxe Salon',
+    tagline: 'Experience Luxury & Style',
     logo: '/images/logo.svg',
     logoAlt: '/images/logo.svg',
     favicon: '/favicon.ico',
@@ -11,9 +11,9 @@ export const brandingConfig = {
     placeholder: '/images/placeholder.png',
   },
   contact: {
-    email: 'contact@example.com',
+    email: 'contact@luxesalon.com',
     phone: '+1 234 567 8900',
-    address: '123 Business Street',
+    address: '123 Luxury Lane, Beverly Hills',
   },
   social: {
     facebook: '',

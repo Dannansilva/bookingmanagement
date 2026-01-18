@@ -1,34 +1,34 @@
 export const themeConfig = {
   colors: {
     primary: {
-      main: '#1e293b',
-      light: '#334155',
-      dark: '#0f172a',
+      main: "#059669", // Emerald 600
+      light: "#34d399", // Emerald 400
+      dark: "#047857", // Emerald 700
     },
     secondary: {
-      main: '#c9a962',
-      light: '#d4b978',
-      dark: '#b8944d',
+      main: "#10b981", // Emerald 500
+      light: "#6ee7b7", // Emerald 300
+      dark: "#059669", // Emerald 600
     },
-    accent: '#c9a962',
+    accent: "#f59e0b", // Amber 500
     background: {
-      default: '#f1f5f9',
-      paper: '#ffffff',
+      default: "#f3f4f6", // Gray 100
+      paper: "#ffffff",
     },
     text: {
-      primary: '#1e293b',
-      secondary: '#64748b',
+      primary: "#111827", // Gray 900
+      secondary: "#6b7280", // Gray 500
     },
-    border: '#e2e8f0',
-    success: '#22c55e',
-    warning: '#f59e0b',
-    error: '#ef4444',
+    border: "#e5e7eb", // Gray 200
+    success: "#10b981", // Emerald 500
+    warning: "#f59e0b", // Amber 500
+    error: "#ef4444", // Red 500
   },
   borderRadius: {
-    sm: '0.375rem',
-    md: '0.5rem',
-    lg: '0.75rem',
-    xl: '1rem',
+    sm: "0.375rem",
+    md: "0.5rem",
+    lg: "0.75rem",
+    xl: "1rem",
   },
 } as const;
 
