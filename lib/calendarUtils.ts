@@ -22,10 +22,10 @@ export const getHeight = (durationMinutes: number) => {
 };
 
 // Generate time slots for the grid
-export const generateTimeSlots = () => {
+export const generateTimeSlots = (baseDate: Date = new Date()) => {
   const slots = [];
-  let currentTime = setMinutes(setHours(new Date(), START_HOUR), 0);
-  const endTime = setMinutes(setHours(new Date(), END_HOUR), 0);
+  let currentTime = setMinutes(setHours(baseDate, START_HOUR), 0);
+  const endTime = setMinutes(setHours(baseDate, END_HOUR), 0);
 
   while (currentTime <= endTime) {
     slots.push(new Date(currentTime));
@@ -47,4 +47,14 @@ export const getCurrentTimePosition = () => {
   if (diffMinutes > totalDayMinutes) return -1; // After end time
 
   return diffMinutes * PIXELS_PER_MINUTE;
+};
+
+// Calculate time from pixels (Y position)
+export const getTimeFromPixels = (pixels: number) => {
+  const minutes = pixels / PIXELS_PER_MINUTE;
+  const now = new Date();
+  const startOfDayDate = startOfDay(now);
+  const startTime = setMinutes(setHours(startOfDayDate, START_HOUR), 0);
+  
+  return addMinutes(startTime, minutes);
 };

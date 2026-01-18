@@ -10,6 +10,7 @@ import {
   Filter,
 } from "lucide-react";
 import mockData from "@/mockData.json";
+import { AppointmentModal } from "./AppointmentModal";
 
 // Types for our processed data
 interface CalendarAppointment {
@@ -37,44 +38,76 @@ interface CalendarAppointment {
 export const CalendarBoard = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  // Process mock data to flatten bookings into service items suitable for the calendar
+  // Initialize master list from mock data
+  const [allAppointments, setAllAppointments] = useState<CalendarAppointment[]>(
+    () => {
+      const flattened: CalendarAppointment[] = [];
+      mockData.bookings.forEach((booking) => {
+        booking.bookingServiceItems.forEach((item) => {
+          if (!item.isOptimistic) {
+            flattened.push({
+              _id: item._id,
+              bookingId: booking._id,
+              clientName: booking.client.fullName,
+              clientPhone: booking.client.phone,
+              service: {
+                name: item.service.name,
+                description: item.service.description,
+              },
+              assignedTo: item.assignedTo,
+              scheduledStartTime: item.scheduledStartTime,
+              duration: item.duration,
+              status: booking.status,
+              price: item.finalPrice,
+              paymentMode: booking.paymentMode,
+              notes: booking.notes,
+            });
+          }
+        });
+      });
+      return flattened;
+    },
+  );
+
+  // Filter for current date
   const appointments = useMemo(() => {
-    const flattened: CalendarAppointment[] = [];
     const activeStaffIds = new Set(
       mockData.employees.filter((e) => e.isActive).map((e) => e._id),
     );
 
-    mockData.bookings.forEach((booking) => {
-      booking.bookingServiceItems.forEach((item) => {
-        if (!item.isOptimistic) {
-          flattened.push({
-            _id: item._id,
-            bookingId: booking._id,
-            clientName: booking.client.fullName,
-            clientPhone: booking.client.phone,
-            service: {
-              name: item.service.name,
-              description: item.service.description,
-            },
-            assignedTo: item.assignedTo,
-            scheduledStartTime: item.scheduledStartTime,
-            duration: item.duration,
-            status: booking.status,
-            price: item.finalPrice,
-            paymentMode: booking.paymentMode,
-            notes: booking.notes,
-          });
-        }
-      });
-    });
-
-    // Filter for current date
-    return flattened.filter(
+    return allAppointments.filter(
       (app) =>
         isSameDay(parseISO(app.scheduledStartTime), currentDate) &&
         activeStaffIds.has(app.assignedTo._id),
     );
-  }, [currentDate]);
+  }, [currentDate, allAppointments]);
+
+  // Handle move
+  const handleAppointmentMove = (
+    appointmentId: string,
+    newStaffId: string,
+    newStartTime: Date,
+  ) => {
+    setAllAppointments((prev) =>
+      prev.map((app) => {
+        if (app._id === appointmentId) {
+          // Find new staff details
+          const newStaff = mockData.employees.find((e) => e._id === newStaffId);
+
+          return {
+            ...app,
+            assignedTo: {
+              _id: newStaffId,
+              name: newStaff?.name || app.assignedTo.name,
+              designation: newStaff?.designation || app.assignedTo.designation,
+            },
+            scheduledStartTime: newStartTime.toISOString(),
+          };
+        }
+        return app;
+      }),
+    );
+  };
 
   // Get active staff
   const activeStaff = mockData.employees.filter((e) => e.isActive);
@@ -83,8 +116,60 @@ export const CalendarBoard = () => {
   const handleNextDay = () => setCurrentDate((prev) => addDays(prev, 1));
   const handleToday = () => setCurrentDate(new Date());
 
+  // Modal State
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSlot, setSelectedSlot] = useState<{
+    staffId: string;
+    staffName: string;
+    startTime: Date;
+  } | null>(null);
+
+  const handleTimeSlotClick = (staffId: string, time: Date) => {
+    const staff = activeStaff.find((s) => s._id === staffId);
+    if (staff) {
+      setSelectedSlot({
+        staffId,
+        staffName: staff.name,
+        startTime: time,
+      });
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleCreateAppointment = (data: any) => {
+    const newAppointment: CalendarAppointment = {
+      _id: `new-${Date.now()}`,
+      bookingId: `book-${Date.now()}`,
+      clientName: data.clientName,
+      clientPhone: "",
+      service: {
+        name: data.serviceName,
+        description: "",
+      },
+      assignedTo: {
+        _id: data.staffId,
+        name: activeStaff.find((s) => s._id === data.staffId)?.name || "",
+        designation: "THERAPIST", // Default
+      },
+      scheduledStartTime: data.startTime.toISOString(),
+      duration: data.duration,
+      status: "confirmed",
+      price: 0, // Default
+    };
+
+    setAllAppointments((prev) => [...prev, newAppointment]);
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="flex flex-col h-full gap-4">
+      <AppointmentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSave={handleCreateAppointment}
+        initialData={selectedSlot || undefined}
+      />
+
       {/* Header / Toolbar */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -131,6 +216,8 @@ export const CalendarBoard = () => {
         staff={activeStaff}
         appointments={appointments}
         onAppointmentClick={(app) => console.log("Clicked appointment", app)}
+        onAppointmentMove={handleAppointmentMove}
+        onTimeSlotClick={handleTimeSlotClick}
       />
     </div>
   );

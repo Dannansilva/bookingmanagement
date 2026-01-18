@@ -9,6 +9,7 @@ import {
   PIXELS_PER_MINUTE,
   START_HOUR,
   END_HOUR,
+  getTimeFromPixels,
 } from "@/lib/calendarUtils";
 import { AppointmentCard } from "./AppointmentCard";
 import { TimeIndicator } from "./TimeIndicator";
@@ -19,6 +20,11 @@ interface ResourceGridProps {
   appointments: any[]; // Flat list of processed appointment items
   onAppointmentClick?: (appointment: any) => void;
   onTimeSlotClick?: (staffId: string, time: Date) => void;
+  onAppointmentMove?: (
+    appointmentId: string,
+    newStaffId: string,
+    newStartTime: Date,
+  ) => void;
 }
 
 export const ResourceGrid = ({
@@ -27,10 +33,73 @@ export const ResourceGrid = ({
   appointments,
   onAppointmentClick,
   onTimeSlotClick,
+  onAppointmentMove,
 }: ResourceGridProps) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const timeSlots = generateTimeSlots();
+  const timeSlots = generateTimeSlots(date);
+
+  // State for hover
+  const [hoveredTime, setHoveredTime] = React.useState<{
+    time: Date;
+    top: number;
+  } | null>(null);
+  const [hoveredStaffId, setHoveredStaffId] = React.useState<string | null>(
+    null,
+  );
+
+  // Handlers
+  const handleMouseMove = (e: React.MouseEvent, staffId: string) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const y = e.clientY - rect.top; // Relative to current target (the column div)
+
+    // Snap to 15 mins (PIXELS_PER_MINUTE = 2.5)
+    // 15 mins = 37.5px
+    const rawMinutes = y / 2.5;
+    const roundedMinutes = Math.floor(rawMinutes / 15) * 15;
+    const top = roundedMinutes * 2.5;
+
+    const time = getTimeFromPixels(top);
+
+    setHoveredTime({ time, top });
+    setHoveredStaffId(staffId);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredTime(null);
+    setHoveredStaffId(null);
+  };
+
+  const handleDragOver = (e: React.DragEvent, staffId: string) => {
+    e.preventDefault(); // Allow drop
+    // We reuse mouse move logic for ghost/indicator
+    // However, for dragover, we might need clientY relative to the target again
+    const rect = e.currentTarget.getBoundingClientRect();
+    const y = e.clientY - rect.top;
+
+    const rawMinutes = y / 2.5;
+    const roundedMinutes = Math.floor(rawMinutes / 15) * 15;
+    const top = roundedMinutes * 2.5;
+    const time = getTimeFromPixels(top);
+
+    setHoveredTime({ time, top });
+    setHoveredStaffId(staffId);
+  };
+
+  const handleDrop = (e: React.DragEvent, staffId: string) => {
+    e.preventDefault();
+    try {
+      const data = e.dataTransfer.getData("appointment");
+      if (data && hoveredTime) {
+        const appointment = JSON.parse(data);
+        // Call parent
+        onAppointmentMove?.(appointment._id, staffId, hoveredTime.time);
+      }
+    } catch (err) {
+      console.error("Failed to parse dropped appointment", err);
+    }
+    handleMouseLeave();
+  };
 
   // Sync header scroll with body scroll
   const handleScroll = () => {

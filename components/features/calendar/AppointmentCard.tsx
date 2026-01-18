@@ -7,11 +7,13 @@ import { Scissors } from "lucide-react";
 interface AppointmentCardProps {
   appointment: any; // Using any for now based on mock structure complexity
   onClick?: (appointment: any) => void;
+  onDragStart?: (e: React.DragEvent, appointment: any) => void;
 }
 
 export const AppointmentCard = ({
   appointment,
   onClick,
+  onDragStart,
 }: AppointmentCardProps) => {
   // Find the specific service item for this appointment from the booking
   // NOTE: In a real app, we'd pass the specific BookingServiceItem.
@@ -53,6 +55,8 @@ export const AppointmentCard = ({
 
   return (
     <div
+      draggable
+      onDragStart={(e) => onDragStart?.(e, appointment)}
       className={cn(
         "absolute left-1 right-1 rounded-md border-l-4 px-2 py-1 text-xs shadow-sm cursor-pointer transition-all hover:brightness-95 hover:z-10 overflow-hidden",
         currentStatusStyle,
