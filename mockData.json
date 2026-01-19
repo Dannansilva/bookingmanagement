@@ -444,11 +444,11 @@
         "fullName": "Priya Sharma",
         "phone": "+94771234567"
       },
-      "bookingTime": "2025-01-06T10:00:00.000+05:30",
+      "bookingTime": "2026-01-19T10:00:00.000+05:30",
       "status": "confirmed",
       "notes": "Client prefers female therapist",
       "paymentMode": "CARD",
-      "receiptNumber": "RCP20250001",
+      "receiptNumber": "RCP20260001",
       "bookingServiceItems": [
         {
           "_id": "bsi001",
@@ -470,8 +470,8 @@
           "finalPrice": 6400,
           "discountApplied": 1600,
           "duration": 60,
-          "scheduledStartTime": "2025-01-06T10:00:00.000+05:30",
-          "scheduledEndTime": "2025-01-06T11:00:00.000+05:30",
+          "scheduledStartTime": "2026-01-19T10:00:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T11:00:00.000+05:30",
           "notes": "",
           "isOptimistic": false
         }
@@ -480,8 +480,8 @@
       "finalPrice": 6400,
       "discountApplied": 1600,
       "duration": 60,
-      "createdAt": "2025-01-04T14:30:00.000+05:30",
-      "updatedAt": "2025-01-04T14:30:00.000+05:30"
+      "createdAt": "2026-01-17T14:30:00.000+05:30",
+      "updatedAt": "2026-01-17T14:30:00.000+05:30"
     },
     {
       "_id": "book002",
@@ -491,11 +491,11 @@
         "fullName": "Rajesh Fernando",
         "phone": "+94772345678"
       },
-      "bookingTime": "2025-01-06T14:00:00.000+05:30",
+      "bookingTime": "2026-01-19T14:00:00.000+05:30",
       "status": "confirmed",
       "notes": "",
       "paymentMode": "CASH",
-      "receiptNumber": "RCP20250002",
+      "receiptNumber": "RCP20260002",
       "bookingServiceItems": [
         {
           "_id": "bsi002",
@@ -517,8 +517,8 @@
           "finalPrice": 12000,
           "discountApplied": 0,
           "duration": 90,
-          "scheduledStartTime": "2025-01-06T14:00:00.000+05:30",
-          "scheduledEndTime": "2025-01-06T15:30:00.000+05:30",
+          "scheduledStartTime": "2026-01-19T14:00:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T15:30:00.000+05:30",
           "notes": "",
           "isOptimistic": false
         }
@@ -527,8 +527,8 @@
       "finalPrice": 12000,
       "discountApplied": 0,
       "duration": 90,
-      "createdAt": "2025-01-04T16:20:00.000+05:30",
-      "updatedAt": "2025-01-04T16:20:00.000+05:30"
+      "createdAt": "2026-01-17T16:20:00.000+05:30",
+      "updatedAt": "2026-01-17T16:20:00.000+05:30"
     },
     {
       "_id": "book003",
@@ -538,7 +538,7 @@
         "fullName": "Amaya Perera",
         "phone": "+94773456789"
       },
-      "bookingTime": "2025-01-07T11:00:00.000+05:30",
+      "bookingTime": "2026-01-19T11:00:00.000+05:30",
       "status": "pending",
       "notes": "Multi-service booking",
       "paymentMode": "CARD",
@@ -564,8 +564,8 @@
           "finalPrice": 8075,
           "discountApplied": 1425,
           "duration": 75,
-          "scheduledStartTime": "2025-01-07T11:00:00.000+05:30",
-          "scheduledEndTime": "2025-01-07T12:15:00.000+05:30",
+          "scheduledStartTime": "2026-01-19T11:00:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T12:15:00.000+05:30",
           "notes": "",
           "isOptimistic": false
         },
@@ -589,8 +589,8 @@
           "finalPrice": 5100,
           "discountApplied": 900,
           "duration": 60,
-          "scheduledStartTime": "2025-01-07T12:30:00.000+05:30",
-          "scheduledEndTime": "2025-01-07T13:30:00.000+05:30",
+          "scheduledStartTime": "2026-01-19T12:30:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T13:30:00.000+05:30",
           "notes": "",
           "isOptimistic": false
         }
@@ -599,8 +599,8 @@
       "finalPrice": 13175,
       "discountApplied": 2325,
       "duration": 135,
-      "createdAt": "2025-01-05T09:45:00.000+05:30",
-      "updatedAt": "2025-01-05T09:45:00.000+05:30"
+      "createdAt": "2026-01-18T09:45:00.000+05:30",
+      "updatedAt": "2026-01-18T09:45:00.000+05:30"
     },
     {
       "_id": "book004",
@@ -610,11 +610,11 @@
         "fullName": "Kamal Silva",
         "phone": "+94774567890"
       },
-      "bookingTime": "2025-01-05T15:00:00.000+05:30",
+      "bookingTime": "2026-01-19T15:00:00.000+05:30",
       "status": "completed",
       "notes": "",
       "paymentMode": "CASH",
-      "receiptNumber": "RCP20250003",
+      "receiptNumber": "RCP20260003",
       "bookingServiceItems": [
         {
           "_id": "bsi005",
@@ -636,8 +636,8 @@
           "finalPrice": 3000,
           "discountApplied": 0,
           "duration": 60,
-          "scheduledStartTime": "2025-01-05T15:00:00.000+05:30",
-          "scheduledEndTime": "2025-01-05T16:00:00.000+05:30",
+          "scheduledStartTime": "2026-01-19T15:00:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T16:00:00.000+05:30",
           "notes": "",
           "isOptimistic": false
         }
@@ -646,8 +646,102 @@
       "finalPrice": 3000,
       "discountApplied": 0,
       "duration": 60,
-      "createdAt": "2025-01-05T09:00:00.000+05:30",
-      "updatedAt": "2025-01-05T16:15:00.000+05:30"
+      "createdAt": "2026-01-18T09:00:00.000+05:30",
+      "updatedAt": "2026-01-19T16:15:00.000+05:30"
+    },
+    {
+      "_id": "book005",
+      "client": {
+        "_id": "client005",
+        "email": "nadeesha.j@email.com",
+        "fullName": "Nadeesha Jayasinghe",
+        "phone": "+94775678901"
+      },
+      "bookingTime": "2026-01-19T09:00:00.000+05:30",
+      "status": "confirmed",
+      "notes": "First time client",
+      "paymentMode": "CARD",
+      "receiptNumber": "RCP20260004",
+      "bookingServiceItems": [
+        {
+          "_id": "bsi006",
+          "booking": "book005",
+          "service": {
+            "_id": "svc006",
+            "name": "Hot Stone Massage",
+            "price": 10000,
+            "duration": 90,
+            "description": "Therapeutic hot stone massage"
+          },
+          "assignedTo": {
+            "_id": "emp002",
+            "name": "Chaminda Rathnayake",
+            "email": "chaminda.r@gmail.com",
+            "designation": "THERAPIST"
+          },
+          "price": 10000,
+          "finalPrice": 10000,
+          "discountApplied": 0,
+          "duration": 90,
+          "scheduledStartTime": "2026-01-19T09:00:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T10:30:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 10000,
+      "finalPrice": 10000,
+      "discountApplied": 0,
+      "duration": 90,
+      "createdAt": "2026-01-18T11:00:00.000+05:30",
+      "updatedAt": "2026-01-18T11:00:00.000+05:30"
+    },
+    {
+      "_id": "book006",
+      "client": {
+        "_id": "client001",
+        "email": "priya.sharma@email.com",
+        "fullName": "Priya Sharma",
+        "phone": "+94771234567"
+      },
+      "bookingTime": "2026-01-19T16:30:00.000+05:30",
+      "status": "pending",
+      "notes": "VIP client - second appointment",
+      "paymentMode": "WALLET",
+      "receiptNumber": null,
+      "bookingServiceItems": [
+        {
+          "_id": "bsi007",
+          "booking": "book006",
+          "service": {
+            "_id": "svc007",
+            "name": "Meditation Session",
+            "price": 2500,
+            "duration": 45,
+            "description": "Guided meditation for stress relief"
+          },
+          "assignedTo": {
+            "_id": "emp004",
+            "name": "Nuwan Bandara",
+            "email": "nuwan.b@gmail.com",
+            "designation": "THERAPIST"
+          },
+          "price": 2500,
+          "finalPrice": 2000,
+          "discountApplied": 500,
+          "duration": 45,
+          "scheduledStartTime": "2026-01-19T16:30:00.000+05:30",
+          "scheduledEndTime": "2026-01-19T17:15:00.000+05:30",
+          "notes": "",
+          "isOptimistic": false
+        }
+      ],
+      "price": 2500,
+      "finalPrice": 2000,
+      "discountApplied": 500,
+      "duration": 45,
+      "createdAt": "2026-01-19T08:00:00.000+05:30",
+      "updatedAt": "2026-01-19T08:00:00.000+05:30"
     }
   ],
   "discountRequests": [

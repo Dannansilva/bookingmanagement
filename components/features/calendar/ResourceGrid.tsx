@@ -193,12 +193,39 @@ export const ResourceGrid = ({
                     <div
                       key={member._id}
                       className="flex-1 min-w-[200px] border-r border-slate-200 dark:border-slate-800 last:border-r-0 relative group shrink-0"
+                      style={{ height: (END_HOUR - START_HOUR) * HOUR_HEIGHT }}
+                      onMouseMove={(e) => handleMouseMove(e, member._id)}
+                      onMouseLeave={handleMouseLeave}
+                      onDragOver={(e) => handleDragOver(e, member._id)}
+                      onDrop={(e) => handleDrop(e, member._id)}
+                      onClick={() => {
+                        if (hoveredTime && hoveredStaffId === member._id) {
+                          onTimeSlotClick?.(member._id, hoveredTime.time);
+                        }
+                      }}
                     >
+                      {/* Hover indicator for time slot */}
+                      {hoveredStaffId === member._id && hoveredTime && (
+                        <div
+                          className="absolute left-0 right-0 h-[37.5px] bg-teal-500/10 border border-dashed border-teal-500/30 rounded pointer-events-none z-10"
+                          style={{ top: hoveredTime.top }}
+                        >
+                          <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xs text-teal-600 dark:text-teal-400 font-medium">
+                            {format(hoveredTime.time, "h:mm a")}
+                          </span>
+                        </div>
+                      )}
                       {memberAppointments.map((app: any) => (
                         <AppointmentCard
                           key={app._id}
                           appointment={app}
                           onClick={onAppointmentClick}
+                          onDragStart={(e, appointment) => {
+                            e.dataTransfer.setData(
+                              "appointment",
+                              JSON.stringify(appointment),
+                            );
+                          }}
                         />
                       ))}
                     </div>
